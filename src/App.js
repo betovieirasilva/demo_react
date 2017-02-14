@@ -1,11 +1,21 @@
 import React from 'react';
 
 class App extends React.Component {
+
+  constructor(){
+      super();
+      this.state = {
+          txt: 'this is the state txt'
+      }
+  }
+
   render(){
     let txt = this.props.txt
     return (
         <div>
             <h1>{txt}</h1>
+            <br />
+            <h1>{this.state.txt}</h1>
         </div>
     )
   }
