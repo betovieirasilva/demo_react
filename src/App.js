@@ -25,7 +25,7 @@ class App extends React.Component {
             <h1>{this.state.txt} - {this.state.cat}</h1>
             <br />
             <br />
-            <Button2>Reatc</Button2>
+            <Button2>I <Heart /> Reatc</Button2>
         </div>
     )
   }
@@ -36,6 +36,12 @@ const Widget = (props) =>
 
 const Button2 = (props) =>
     <button>{props.children}</button>
+
+class Heart extends React.Component {
+    render(){
+        return <span>&hearts;</span>
+    }
+}
 
 App.propTypes = {
     txt: React.PropTypes.string,
