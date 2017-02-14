@@ -19,7 +19,7 @@ class App extends React.Component {
     let txt = this.props.txt
     return (
         <div>
-            <Title text="Insira seu titulo aqui" />
+            <Title text="12345"/>
             <br />
             <h1>{txt}</h1>
             <br />
@@ -48,7 +48,14 @@ class Heart extends React.Component {
 const Title = (props) => <h1>Title: {props.text}</h1>
 
 Title.propTypes = {
-    text : React.PropTypes.string.isRequired
+    text(props, propName, component) {
+        if (!(propName in props)){
+            return new Error('missing ${propName}')
+        }
+        if (props[propName].length < 6) {
+            return new Error('${propName} was too short')
+        }
+    }
 }
 
 App.propTypes = {
