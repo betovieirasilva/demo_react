@@ -19,7 +19,7 @@ class App extends React.Component {
     let txt = this.props.txt
     return (
         <div>
-            <Title text="12345"/>
+            <Title text="Titulo maior que 5"/>
             <br />
             <h1>{txt}</h1>
             <br />
