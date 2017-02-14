@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
 
@@ -29,12 +28,7 @@ class App extends React.Component {
       })
   }
 
-  componentWillMount(){
-      console.log('mount');
-  }
-
   render() {
-    console.log('render');
     //  verificar a chamada do <App em index,js
     let txt = this.props.txt
     return (
@@ -70,14 +64,6 @@ class App extends React.Component {
         </div>
     )
   }
-
-  componentDidMount() {
-    console.log('did mount');
-  }
-  componentWillUnmount() {
-    console.log('unmount');
-  }
-
 }
 
 const Widget = (props) =>
@@ -120,25 +106,6 @@ App.defaultProps = {
     txt : "this is the default txt"
 }
 
-class Wrapper extends React.Component {
-    mount(){
-        ReactDOM.render(<App cat={10} />, document.getElementById('a'))
-    }
-    unmount(){
-        ReactDOM.unmountComponentAtNode(document.getElementById('a'))
-    }
-    render(){
-        return (
-            <div>
-                <button onClick={this.mount.bind(this)}>Mount</button>
-                <button onClick={this.unmount.bind(this)}>UnMount</button>
-                <div id="a"></div>
-            </div>
-        )
-    }
-}
-
-
 //OR
 //const App = () => <h1>Hello World</h1>
-export default Wrapper
+export default App
