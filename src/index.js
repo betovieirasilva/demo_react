@@ -8,11 +8,21 @@
 // );
 
 //novos testes com react, para facilitar isolei no AppB
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import AppB from './AppB';
+//
+// ReactDOM.render(
+//     <AppB />,
+//     document.getElementById('root')
+// );
+
+//https://egghead.io/lessons/react-component-lifecycle-updating
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppB from './AppB';
+import AppC from './AppC';
 
 ReactDOM.render(
-    <AppB />,
+    <AppC />,
     document.getElementById('root')
 );
