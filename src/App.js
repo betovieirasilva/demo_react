@@ -15,6 +15,7 @@ class App extends React.Component {
   }
 
   render(){
+    //  verificar a chamada do <App em index,js
     let txt = this.props.txt
     return (
         <div>
