@@ -19,6 +19,8 @@ class App extends React.Component {
     let txt = this.props.txt
     return (
         <div>
+            <Title />
+            <br />
             <h1>{txt}</h1>
             <br />
             <Widget update={this.update.bind(this)} />
@@ -42,6 +44,9 @@ class Heart extends React.Component {
         return <span>&hearts;</span>
     }
 }
+
+const Title = (props) => <h1>Title: {props.text}</h1>
+
 
 App.propTypes = {
     txt: React.PropTypes.string,
