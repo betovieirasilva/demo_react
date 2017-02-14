@@ -8,6 +8,7 @@ class App extends React.Component {
           txt: 'this is the state txt',
           cat : 0,
           currentEvent: '---------',
+          a: ''
       }
       this.updateEvent = this.updateEvent.bind(this)
   }
@@ -18,6 +19,13 @@ class App extends React.Component {
 
   update ( e ) {
       this.setState({txt: e.target.value})
+  }
+
+  updateValue( e ) {
+      this.setState({
+          a: this.refs.a.value,
+          b: this.refs.b.value
+      })
   }
 
   render(){
@@ -48,6 +56,11 @@ class App extends React.Component {
                 rows="10"
             />
             <h1>{this.state.currentEvent}</h1>
+            <br />
+            <br />
+            <input ref="a" type="text" onChange={this.updateValue.bind(this)} /> <span>{this.state.a}</span>
+            <br /><br />
+            <input ref="b" type="text" onChange={this.updateValue.bind(this)} /> <span>{this.state.b}</span>
         </div>
     )
   }
