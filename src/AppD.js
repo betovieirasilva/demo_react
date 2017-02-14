@@ -2,10 +2,23 @@ import React from 'react';
 
 class AppD extends React.Component {
 
+    constructor(){
+        super();
+        this.state = {items: []}
+    }
+
+    componentWillMount(){
+        console.log('componentWillMount');
+        fetch('http://swapi.co/api/people/?format-json')
+            .then( response => response.json() )
+            .then( ({results: items}) => this.setState({items}) )
+    }
+
     render() {
+        let items = this.state.items;
         return (
             <div>
-                Exemplo de teste
+                {items.map( item => <h4 key={item.name}>{item.name}</h4>)}
             </div>
         )
     }
