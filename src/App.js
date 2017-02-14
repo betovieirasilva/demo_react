@@ -5,7 +5,8 @@ class App extends React.Component {
   constructor(){
       super();
       this.state = {
-          txt: 'this is the state txt'
+          txt: 'this is the state txt',
+          cat : 0
       }
   }
 
@@ -20,7 +21,7 @@ class App extends React.Component {
             <h1>{txt}</h1>
             <br />
             <input type="text" onChange={this.update.bind(this)} />
-            <h1>{this.state.txt}</h1>
+            <h1>{this.state.txt} - {this.state.cat}</h1>
         </div>
     )
   }
