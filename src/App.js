@@ -44,6 +44,8 @@ class App extends React.Component {
                 onBlur={this.updateEvent}
                 onDoubleClick={this.updateEvent}
                 onTouchStart={this.updateEvent}
+                cols="30"
+                rows="10"
             />
             <h1>{this.state.currentEvent}</h1>
         </div>
