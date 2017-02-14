@@ -24,7 +24,7 @@ class App extends React.Component {
   updateValue( e ) {
       this.setState({
           a: this.a.refs.input.value,
-          b: this.b.value
+          b: this.b.refs.input.value,
       })
   }
 
@@ -60,7 +60,7 @@ class App extends React.Component {
             <br />
             <Input ref={ component => this.a = component } updateValue={this.updateValue.bind(this)} /> <span>{this.state.a}</span>
             <br /><br />
-            <input ref={ node => this.b = node } type="text" onChange={this.updateValue.bind(this)} /> <span>{this.state.b}</span>
+            <Input ref={ component => this.b = component } updateValue={this.updateValue.bind(this)} /> <span>{this.state.b}</span>
         </div>
     )
   }
