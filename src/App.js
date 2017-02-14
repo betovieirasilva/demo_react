@@ -19,7 +19,7 @@ class App extends React.Component {
     let txt = this.props.txt
     return (
         <div>
-            <Title />
+            <Title text="Insira seu titulo aqui" />
             <br />
             <h1>{txt}</h1>
             <br />
@@ -47,6 +47,9 @@ class Heart extends React.Component {
 
 const Title = (props) => <h1>Title: {props.text}</h1>
 
+Title.propTypes = {
+    text : React.PropTypes.string.isRequired
+}
 
 App.propTypes = {
     txt: React.PropTypes.string,
