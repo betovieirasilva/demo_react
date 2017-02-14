@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends React.Component {
 
@@ -23,7 +24,7 @@ class App extends React.Component {
 
   updateValue( e ) {
       this.setState({
-          a: this.a.value,
+          a: ReactDOM.findDOMNode(this.a).value,
           b: this.b.value
       })
   }
@@ -58,7 +59,7 @@ class App extends React.Component {
             <h1>{this.state.currentEvent}</h1>
             <br />
             <br />
-            <input ref={ node => this.a = node } type="text" onChange={this.updateValue.bind(this)} /> <span>{this.state.a}</span>
+            <Input ref={ component => this.a = component } updateValue={this.updateValue.bind(this)} /> <span>{this.state.a}</span>
             <br /><br />
             <input ref={ node => this.b = node } type="text" onChange={this.updateValue.bind(this)} /> <span>{this.state.b}</span>
         </div>
@@ -75,6 +76,12 @@ const Button2 = (props) =>
 class Heart extends React.Component {
     render(){
         return <span>&hearts;</span>
+    }
+}
+
+class Input extends React.Component {
+    render() {
+        return <input type="text" onChange={this.props.updateValue} />
     }
 }
 
