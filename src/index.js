@@ -18,11 +18,21 @@
 // );
 
 //https://egghead.io/lessons/react-component-lifecycle-updating
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import AppC from './AppC';
+//
+// ReactDOM.render(
+//     <AppC />,
+//     document.getElementById('root')
+// );
+
+//https://egghead.io/lessons/react-dynamically-generated-components
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppC from './AppC';
+import AppD from './AppD';
 
 ReactDOM.render(
-    <AppC />,
+    <AppD />,
     document.getElementById('root')
 );
