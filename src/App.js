@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends React.Component {
 
@@ -28,7 +29,8 @@ class App extends React.Component {
       })
   }
 
-  render(){
+  render() {
+    console.log('render');
     //  verificar a chamada do <App em index,js
     let txt = this.props.txt
     return (
@@ -106,6 +108,25 @@ App.defaultProps = {
     txt : "this is the default txt"
 }
 
+class Wrapper extends React.Component {
+    mount(){
+        ReactDOM.render(<App cat={10} />, document.getElementById('a'))
+    }
+    unmount(){
+        ReactDOM.unmountComponentAtNode(document.getElementById('a'))
+    }
+    render(){
+        return (
+            <div>
+                <button onClick={this.mount.bind(this)}>Mount</button>
+                <button onClick={this.unmount.bind(this)}>UnMount</button>
+                <div id="a"></div>
+            </div>
+        )
+    }
+}
+
+
 //OR
 //const App = () => <h1>Hello World</h1>
-export default App
+export default Wrapper
