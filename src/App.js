@@ -11,6 +11,15 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+    txt: React.PropTypes.string,
+    cat: React.PropTypes.number.isRequired
+}
+
+App.defaultProps = {
+    txt : "this is the default txt"
+}
+
 //OR
 //const App = () => <h1>Hello World</h1>
 export default App
