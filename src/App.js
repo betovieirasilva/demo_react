@@ -6,8 +6,14 @@ class App extends React.Component {
       super();
       this.state = {
           txt: 'this is the state txt',
-          cat : 0
+          cat : 0,
+          currentEvent: '---------',
       }
+      this.updateEvent = this.updateEvent.bind(this)
+  }
+
+  updateEvent( e ) {
+      this.setState({currentEvent: e.type})
   }
 
   update ( e ) {
@@ -28,6 +34,18 @@ class App extends React.Component {
             <br />
             <br />
             <Button2>I <Heart /> Reatc</Button2>
+            <br />
+            <br />
+            <textarea
+                onKeyPress={this.updateEvent}
+                onCopy={this.updateEvent}
+                onCut={this.updateEvent}
+                onFocus={this.updateEvent}
+                onBlur={this.updateEvent}
+                onDoubleClick={this.updateEvent}
+                onTouchStart={this.updateEvent}
+            />
+            <h1>{this.state.currentEvent}</h1>
         </div>
     )
   }
