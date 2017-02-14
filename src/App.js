@@ -22,14 +22,20 @@ class App extends React.Component {
             <h1>{txt}</h1>
             <br />
             <Widget update={this.update.bind(this)} />
+            <Widget update={this.update.bind(this)} />
+            <Widget update={this.update.bind(this)} />
             <h1>{this.state.txt} - {this.state.cat}</h1>
         </div>
     )
   }
 }
 
-const Widget = (props) =>
-    <input type="text" onChange={props.update} />
+const Widget = (props) => (
+    <div>
+        <input type="text" onChange={props.update} />
+        <br /><br />
+    </div>
+)
 
 App.propTypes = {
     txt: React.PropTypes.string,
