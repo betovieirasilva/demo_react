@@ -17,22 +17,25 @@ class AppB extends React.Component {
 
     componentWillMount(){
         console.log('mount');
+        this.setState({m: 2})
     }
 
     render() {
         console.log('render');
         return (
             <div>
-                <button onClick={this.update}>{this.state.val}</button>
+                <button onClick={this.update}>{this.state.val * this.state.m}</button>
             </div>
         )
     }
 
     componentDidMount() {
         console.log('did mount');
+        this.inc = setInterval(this.update, 500)
     }
     componentWillUnmount() {
-        console.log('unmount');
+        console.log('unmount')
+        clearInterval(this.inc)
     }
 }
 
