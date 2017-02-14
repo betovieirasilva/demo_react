@@ -29,6 +29,10 @@ class App extends React.Component {
       })
   }
 
+  componentWillMount(){
+      console.log('mount');
+  }
+
   render() {
     console.log('render');
     //  verificar a chamada do <App em index,js
@@ -66,6 +70,14 @@ class App extends React.Component {
         </div>
     )
   }
+
+  componentDidMount() {
+    console.log('did mount');
+  }
+  componentWillUnmount() {
+    console.log('unmount');
+  }
+
 }
 
 const Widget = (props) =>
