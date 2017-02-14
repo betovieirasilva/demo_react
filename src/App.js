@@ -23,6 +23,9 @@ class App extends React.Component {
             <br />
             <Widget update={this.update.bind(this)} />
             <h1>{this.state.txt} - {this.state.cat}</h1>
+            <br />
+            <br />
+            <Button2>Reatc</Button2>
         </div>
     )
   }
@@ -30,6 +33,9 @@ class App extends React.Component {
 
 const Widget = (props) =>
     <input type="text" onChange={props.update} />
+
+const Button2 = (props) =>
+    <button>{props.children}</button>
 
 App.propTypes = {
     txt: React.PropTypes.string,
