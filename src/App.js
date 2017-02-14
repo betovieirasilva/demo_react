@@ -24,7 +24,7 @@ class App extends React.Component {
 
   updateValue( e ) {
       this.setState({
-          a: ReactDOM.findDOMNode(this.a).value,
+          a: ReactDOM.findDOMNode(this.a).value, /*trabalhando com componente "this.refs.b.value" não funcionaria */
           b: this.b.value
       })
   }
