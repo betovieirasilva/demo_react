@@ -38,11 +38,21 @@
 // );
 
 //https://egghead.io/lessons/react-react-fundamentals-higher-order-components-replaces-mixins
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import AppE from './AppE';
+//
+// ReactDOM.render(
+//     <AppE />,
+//     document.getElementById('root')
+// );
+
+//https://egghead.io/lessons/react-understand-react-children-utilities
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppE from './AppE';
+import AppF from './AppF';
 
 ReactDOM.render(
-    <AppE />,
+    <AppF />,
     document.getElementById('root')
 );
