@@ -1,6 +1,15 @@
 import React from 'react';
 
 const HOC = (InnerComponent) => class extends React.Component {
+    constructor(){
+        super();
+        this.state = {count: 0}
+    }
+
+    update () {
+        this.setState({count: this.state.count + 1})
+    }
+
     componentWillMount() {
         console.log('WILL mount InnerComponent')
     }
@@ -9,6 +18,7 @@ const HOC = (InnerComponent) => class extends React.Component {
         return (
             <InnerComponent
                 {...this.props}
+                {...this.state}
             />
         )
     }
@@ -27,7 +37,9 @@ class AppE extends React.Component {
     }
 }
 
-const Button = HOC((props) => <button>{props.children}</button>)
+const Button = HOC((props) =>
+    <button>{props.children} - {props.count}</button>
+)
 
 class Label extends React.Component {
     componentWillMount() {
@@ -36,7 +48,7 @@ class Label extends React.Component {
 
     render(){
         return (
-            <label>{this.props.children}</label>
+            <label>{this.props.children} - {this.props.count}</label>
         )
     }
 }
