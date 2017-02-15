@@ -34,6 +34,15 @@ class Buttons extends  React.Component {
                 {items}
             </div>
         )
+
+        // return (
+        //     <div>
+        //         <h2>Teste OK</h2>
+        //         {/*vai renderizar a lista de filhos*/}
+        //         {this.props.children}
+        //     </div>
+        // )
+
     }
 }
 
