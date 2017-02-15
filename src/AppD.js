@@ -8,7 +8,6 @@ class AppD extends React.Component {
     }
 
     componentWillMount(){
-        console.log('componentWillMount');
         fetch('http://swapi.co/api/people/?format-json')
             .then( response => response.json() )
             .then( ({results: items}) => this.setState({items}) )
