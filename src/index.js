@@ -48,11 +48,21 @@
 // );
 
 //https://egghead.io/lessons/react-understand-react-children-utilities
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import AppF from './AppF';
+//
+// ReactDOM.render(
+//     <AppF />,
+//     document.getElementById('root')
+// );
+
+//https://egghead.io/lessons/react-use-react-cloneelement-to-extend-functionality-of-children-components
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppF from './AppF';
+import AppG from './AppG';
 
 ReactDOM.render(
-    <AppF />,
+    <AppG />,
     document.getElementById('root')
 );
