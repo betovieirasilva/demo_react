@@ -28,11 +28,21 @@
 // );
 
 //https://egghead.io/lessons/react-dynamically-generated-components
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import AppD from './AppD';
+//
+// ReactDOM.render(
+//     <AppD />,
+//     document.getElementById('root')
+// );
+
+//https://egghead.io/lessons/react-react-fundamentals-higher-order-components-replaces-mixins
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppD from './AppD';
+import AppE from './AppE';
 
 ReactDOM.render(
-    <AppD />,
+    <AppE />,
     document.getElementById('root')
 );
